@@ -37,6 +37,9 @@ pipeline {
                         echo "here"
                         sh "git tag v$NEW_TAG"
                         sh "git checkout -b v$NEW_BRANCH-rc1"
+                    } else
+                    {
+                        echo "Nothing to do."
                     }
                 } else {
                     echo "new tag";
